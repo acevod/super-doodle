@@ -6,14 +6,14 @@
   <title>AceVod</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="https://raw.githubusercontent.com/acevod/eth-limo-mirror/refs/heads/main/IMG_20250530_205416_235.jpg" type="image/jpeg" />
+  <link rel="icon" href="https://raw.githubusercontent.com/acevod/eth-limo-mirror/refs/heads/main/IMG_20250530_205416_235.jpg" />
 
-  <!-- Open Graph & Twitter Preview -->
+  <!-- Open Graph (Preview when shared) -->
   <meta property="og:title" content="AceVod" />
   <meta property="og:description" content="serenity in simplicity" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/acevod/eth-limo-mirror/refs/heads/main/bbed6e284005af298100abc98357b14b.gif" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/acevod/eth-limo-mirror/refs/heads/main/Screenshot_20250802-004739_Acode.jpg" />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://acevod.eth.box" />
-  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,22 +23,24 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://raw.githubusercontent.com/acevod/eth-limo-mirror/refs/heads/main/20250801_234846.jpg') center center / cover no-repeat fixed;
       color: #fff;
-      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
+      min-height: 100vh;
+      background: url('https://raw.githubusercontent.com/acevod/eth-limo-mirror/refs/heads/main/20250802_004337.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
 
     .container {
-      backdrop-filter: blur(10px);
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 2rem;
-      border-radius: 1rem;
+      backdrop-filter: blur(16px);
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
       animation: fadeIn 1.2s ease-out;
-      max-width: 90%;
+      max-width: 90vw;
       width: 400px;
     }
 
@@ -82,7 +84,7 @@
     .desc {
       font-size: 1.1rem;
       margin-bottom: 2rem;
-      color: #ddd;
+      color: #ccc;
     }
 
     .social-icons {
@@ -103,18 +105,10 @@
       text-shadow: 0 0 8px #fff;
     }
 
-    @media (max-width: 500px) {
-      .container {
-        width: 90%;
-        padding: 1.5rem;
-      }
-      .shimmer-text {
-        font-size: 2rem;
-      }
-      .social-icons {
-        font-size: 1.7rem;
-        gap: 1.2rem;
-      }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #999;
     }
   </style>
 </head>
@@ -137,6 +131,7 @@
         <i class="fab fa-tiktok"></i>
       </a>
     </div>
+    <footer></footer>
   </div>
 </body>
-</html>
+  </html>
