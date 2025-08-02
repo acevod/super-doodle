@@ -25,6 +25,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #fff;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
@@ -39,16 +40,45 @@
       }
     }
 
-    .container {
+    .glass-box, .social-glass {
       backdrop-filter: blur(16px);
       background-color: rgba(0, 0, 0, 0.3);
       border-radius: 20px;
-      padding: 2rem 3rem;
+      padding: 2rem 2rem 1.5rem;
       text-align: center;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      width: 320px;
+      margin: 1rem 0;
       animation: fadeIn 1.2s ease-out;
-      max-width: 90vw;
-      width: 400px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .glass-box::before, .social-glass::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      z-index: -1;
+      background: linear-gradient(90deg, cyan, #fff, cyan);
+      background-size: 300% 300%;
+      animation: shimmer 3s linear infinite;
+      border-radius: 23px;
+      mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+      mask-composite: exclude;
+      -webkit-mask-composite: destination-out;
+      padding: 3px;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
     }
 
     @keyframes fadeIn {
@@ -61,8 +91,8 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 1.5rem;
-      border: 2px solid #333;
+      margin-bottom: 0.2rem;
+      border: 2px solid cyan;
       animation: bounce 3s infinite ease-in-out;
     }
 
@@ -72,9 +102,9 @@
     }
 
     .shimmer-text {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, #ccc, #fff, #ccc);
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, #0ff, #fff, #0ff);
       background-size: 200% auto;
       background-clip: text;
       -webkit-background-clip: text;
@@ -83,14 +113,9 @@
       animation: shimmer 2.5s linear infinite;
     }
 
-    @keyframes shimmer {
-      0% { background-position: -200% center; }
-      100% { background-position: 200% center; }
-    }
-
     .desc {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
       color: #ccc;
     }
 
@@ -108,8 +133,8 @@
     }
 
     .social-icons a:hover {
-      color: #fff;
-      text-shadow: 0 0 8px #fff;
+      color: #0ff;
+      text-shadow: 0 0 8px #0ff;
     }
 
     footer {
@@ -120,10 +145,13 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="glass-box">
     <img class="profile-img" src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/Pp.gif" alt="Profile" />
     <h1 class="shimmer-text">AceVod</h1>
     <div class="desc">serenity in simplicity</div>
+  </div>
+
+  <div class="social-glass">
     <div class="social-icons">
       <a href="https://x.com/0xAceVod" target="_blank" title="X (Twitter)">
         <i class="fab fa-twitter"></i>
@@ -138,7 +166,6 @@
         <i class="fab fa-tiktok"></i>
       </a>
     </div>
-    <footer></footer>
   </div>
 </body>
-</html>
+    </html>
