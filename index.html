@@ -64,7 +64,7 @@
       background: linear-gradient(90deg, cyan, #fff, cyan);
       background-size: 300% 300%;
       animation: shimmer 3s linear infinite;
-      border-radius: 23px;
+      border-radius: 22px;
       mask: 
         linear-gradient(#000 0 0) content-box, 
         linear-gradient(#000 0 0);
@@ -91,7 +91,7 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.3rem;
       border: 2px solid cyan;
       animation: bounce 3s infinite ease-in-out;
     }
@@ -137,10 +137,26 @@
       text-shadow: 0 0 8px #0ff;
     }
 
-    footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #999;
+    .footer {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: #ccc;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .footer img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .footer img:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -167,5 +183,16 @@
       </a>
     </div>
   </div>
+
+  <div class="footer">
+    <span>powered by</span>
+    <a href="https://app.ens.domains" target="_blank">
+      <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/ens.jpg" alt="ENS" />
+    </a>
+    ×
+    <a href="https://eth.box" target="_blank">
+      <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/box.jpg" alt="BOX" />
+    </a>
+  </div>
 </body>
-    </html>
+  </html>
