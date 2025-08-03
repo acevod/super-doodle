@@ -15,9 +15,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://acevod.eth.box" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <style>
     body {
       margin: 0;
@@ -123,18 +120,18 @@
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      font-size: 2rem;
+      align-items: center;
     }
 
-    .social-icons a {
-      color: #ccc;
-      text-decoration: none;
-      transition: color 0.3s, text-shadow 0.3s;
+    .social-icons a img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    .social-icons a:hover {
-      color: #0ff;
-      text-shadow: 0 0 8px #0ff;
+    .social-icons a img:hover {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 6px cyan);
     }
 
     .footer {
@@ -179,16 +176,16 @@
   <div class="social-glass">
     <div class="social-icons">
       <a href="https://x.com/0xAceVod" target="_blank" title="X (Twitter)">
-        <i class="fab fa-twitter"></i>
+        <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/logo-white.png" alt="X" />
       </a>
       <a href="https://t.me/AceVod" target="_blank" title="Telegram">
-        <i class="fab fa-telegram"></i>
+        <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/Logo.png" alt="Telegram" />
       </a>
       <a href="https://discord.com/users/1260875957691088958" target="_blank" title="Discord">
-        <i class="fab fa-discord"></i>
+        <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/Discord-Symbol-Blurple.png" alt="Discord" />
       </a>
       <a href="https://tiktok.com/@acevod" target="_blank" title="TikTok">
-        <i class="fab fa-tiktok"></i>
+        <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/TikTok_Icon_Black_Circle.png" alt="TikTok" />
       </a>
     </div>
   </div>
@@ -210,4 +207,4 @@
 
   <p class="copyright">© 2025 AceVod</p>
 </body>
-  </html>
+</html>
