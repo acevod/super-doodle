@@ -62,8 +62,12 @@
       background-size: 300% 300%;
       animation: shimmer 3s linear infinite;
       border-radius: 22px;
-      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
       mask-composite: exclude;
       -webkit-mask-composite: destination-out;
       padding: 3px;
@@ -117,6 +121,7 @@
       justify-content: center;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .social-icons a img {
@@ -169,7 +174,6 @@
       background: radial-gradient(circle, cyan, transparent);
       box-shadow: 0 0 8px cyan;
       border-radius: 1px;
-      animation: fadeIn 1.5s ease-out;
     }
   </style>
 </head>
@@ -194,10 +198,12 @@
       <a href="https://tiktok.com/@acevod" target="_blank" title="TikTok">
         <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/TikTok_Icon_Black_Circle.png" alt="TikTok" />
       </a>
+      <a href="https://github.com/acevod" target="_blank" title="GitHub">
+        <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/GitHub_Invertocat_Light.png" alt="GitHub" />
+      </a>
     </div>
   </div>
 
-  <!-- Separator Glow Line -->
   <div class="separator"></div>
 
   <div class="footer">
@@ -217,4 +223,4 @@
 
   <p class="copyright">© 2025 AceVod</p>
 </body>
-  </html>
+    </html>
