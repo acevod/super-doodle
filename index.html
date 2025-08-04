@@ -62,12 +62,8 @@
       background-size: 300% 300%;
       animation: shimmer 3s linear infinite;
       border-radius: 22px;
-      mask: 
-        linear-gradient(#000 0 0) content-box, 
-        linear-gradient(#000 0 0);
-      -webkit-mask:
-        linear-gradient(#000 0 0) content-box, 
-        linear-gradient(#000 0 0);
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
       mask-composite: exclude;
       -webkit-mask-composite: destination-out;
       padding: 3px;
@@ -173,6 +169,7 @@
       background: radial-gradient(circle, cyan, transparent);
       box-shadow: 0 0 8px cyan;
       border-radius: 1px;
+      animation: fadeIn 1.5s ease-out;
     }
   </style>
 </head>
@@ -220,4 +217,4 @@
 
   <p class="copyright">© 2025 AceVod</p>
 </body>
-      </html>
+  </html>
