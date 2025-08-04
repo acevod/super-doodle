@@ -83,6 +83,26 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    .header-banner {
+      max-width: 70%;
+      width: auto;
+      height: auto;
+      max-height: 120px;
+      margin-top: 0rem;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .header-separator {
+      width: 80%;
+      height: 2px;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      background: radial-gradient(circle, cyan, transparent);
+      box-shadow: 0 0 8px cyan;
+      border-radius: 1px;
+      animation: fadeIn 1.2s ease-out;
+    }
+
     .profile-img {
       width: 120px;
       height: 120px;
@@ -178,12 +198,21 @@
   </style>
 </head>
 <body>
+
+  <!-- Header Banner -->
+  <img class="header-banner" src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/Head.png" alt="Banner"/>
+
+  <!-- Header Separator -->
+  <div class="header-separator"></div>
+
+  <!-- Main Box -->
   <div class="glass-box">
     <img class="profile-img" src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/Pp.gif" alt="Profile" />
     <h1 class="shimmer-text">AceVod</h1>
     <div class="desc">serenity in simplicity</div>
   </div>
 
+  <!-- Social Links -->
   <div class="social-glass">
     <div class="social-icons">
       <a href="https://x.com/0xAceVod" target="_blank" title="X (Twitter)">
@@ -206,6 +235,7 @@
 
   <div class="separator"></div>
 
+  <!-- Footer -->
   <div class="footer">
     <span>built with</span>
   </div>
@@ -223,4 +253,4 @@
 
   <p class="copyright">© 2025 AceVod</p>
 </body>
-    </html>
+        </html>
