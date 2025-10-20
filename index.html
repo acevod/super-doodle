@@ -37,7 +37,7 @@
       }
     }
 
-    .glass-box, .social-glass {
+    .glass-box, .social-glass, .tools-glass {
       backdrop-filter: blur(16px);
       background-color: rgba(0, 0, 0, 0.3);
       border-radius: 20px;
@@ -50,7 +50,7 @@
       z-index: 1;
     }
 
-    .glass-box::before, .social-glass::before {
+    .glass-box::before, .social-glass::before, .tools-glass::before {
       content: '';
       position: absolute;
       top: -3px;
@@ -92,11 +92,11 @@
       animation: fadeIn 1.2s ease-out;
     }
 
-    .header-separator {
+    .header-separator, .separator {
       width: 80%;
       height: 2px;
-      margin-top: 0rem;
-      margin-bottom: 2rem;
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
       background: radial-gradient(circle, cyan, transparent);
       box-shadow: 0 0 8px cyan;
       border-radius: 1px;
@@ -130,6 +130,29 @@
       animation: shimmer 2.5s linear infinite;
     }
 
+    .tools-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, #0ff, #fff, #0ff);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 2.5s linear infinite;
+    }
+
+    .tools-separator {
+      height: 1px; /* lebih tipis */
+      margin: 0.5rem auto 1rem auto;
+      background: radial-gradient(circle, cyan, transparent);
+      box-shadow: 0 0 6px cyan;
+      border-radius: 1px;
+      animation: fadeIn 1.2s ease-out;
+      width: 60%;         
+      max-width: 120px;   
+    }
+
     .desc {
       font-size: 1.05rem;
       margin-bottom: 1rem;
@@ -153,6 +176,54 @@
     .social-icons a img:hover {
       transform: scale(1.15);
       filter: drop-shadow(0 0 6px cyan);
+    }
+
+    .tool-box {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-align: left;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .tool-box:last-child {
+      margin-bottom: 0;
+    }
+
+    .tool-box img {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .tool-box img:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 6px cyan);
+    }
+
+    .tool-text {
+      font-size: 0.85rem;
+      color: #ccc;
+      line-height: 1.3rem;
+      max-width: 220px;
+      text-align: justify;
+    }
+
+    .tool-text a {
+      color: #0ff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .tool-text a:hover {
+      color: #fff;
+      text-decoration: underline;
+      text-shadow: 0 0 6px cyan;
     }
 
     .footer {
@@ -184,16 +255,6 @@
       margin-top: 0.5rem;
       text-align: center;
       animation: fadeIn 1.8s ease-out;
-    }
-
-    .separator {
-      width: 80%;
-      height: 2px;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      background: radial-gradient(circle, cyan, transparent);
-      box-shadow: 0 0 8px cyan;
-      border-radius: 1px;
     }
   </style>
 </head>
@@ -227,6 +288,47 @@
     </div>
   </div>
 
+  <!-- Separator -->
+  <div class="separator"></div>
+
+  <!-- Tools Box -->
+  <div class="tools-glass">
+    <div class="tools-title">Tools</div>
+    <div class="tools-separator"></div>
+
+    <!-- CMM -->
+    <div class="tool-box">
+      <a href="https://coinmarketman.com" target="_blank">
+        <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/cmm.jpg" alt="CMM Logo"/>
+      </a>
+      <div class="tool-text">
+        <a href="https://coinmarketman.com" target="_blank">Coin Market Manager</a> - #1 Automated Journaling & Analytics Tool for Crypto Futures.  
+        Make better trading decisions with CMM. Journal, analyse, and identify your trading strengths and weaknesses to gain an edge.
+      </div>
+    </div>
+
+    <!-- HyperTracker -->
+    <div class="tool-box">
+      <a href="https://hypertracker.io" target="_blank">
+        <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/ht.jpg" alt="HyperTracker Logo"/>
+      </a>
+      <div class="tool-text">
+        <a href="https://hypertracker.io" target="_blank">HyperTracker</a> - Tracking all Hyperliquid wallets in real time.
+      </div>
+    </div>
+
+    <!-- Alpha Arena -->
+    <div class="tool-box">
+      <a href="https://nof1.ai" target="_blank">
+        <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/nof.jpg" alt="Alpha Arena Logo"/>
+      </a>
+      <div class="tool-text">
+        <a href="https://nof1.ai" target="_blank">Alpha Arena</a> - 6 AI models (xAI, OpenAI, Anthropic, Google DeepMind, DeepSeek, Qwen) trading $10K each, fully autonomously. Real money, real markets, real benchmark.
+      </div>
+    </div>
+  </div>
+
+  <!-- Separator -->
   <div class="separator"></div>
 
   <!-- Footer -->
@@ -241,4 +343,4 @@
 
   <p class="copyright">© 2025 AceVod</p>
 </body>
-        </html>
+  </html>
