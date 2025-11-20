@@ -50,29 +50,6 @@
       z-index: 1;
     }
 
-    .glass-box::before, .social-glass::before, .tools-glass::before {
-      content: '';
-      position: absolute;
-      top: -3px;
-      left: -3px;
-      right: -3px;
-      bottom: -3px;
-      z-index: -1;
-      background: linear-gradient(90deg, cyan, #fff, cyan);
-      background-size: 300% 300%;
-      animation: shimmer 3s linear infinite;
-      border-radius: 22px;
-      mask: 
-        linear-gradient(#000 0 0) content-box, 
-        linear-gradient(#000 0 0);
-      -webkit-mask:
-        linear-gradient(#000 0 0) content-box, 
-        linear-gradient(#000 0 0);
-      mask-composite: exclude;
-      -webkit-mask-composite: destination-out;
-      padding: 3px;
-    }
-
     @keyframes shimmer {
       0% { background-position: -200% 0; }
       100% { background-position: 200% 0; }
@@ -104,23 +81,18 @@
     }
 
     .profile-img {
-      width: 120px;
-      height: 120px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0rem;
       border: 2px solid cyan;
       animation: bounce 3s infinite ease-in-out;
     }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-
     .shimmer-text {
-      font-size: 2.3rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      margin-bottom: 0rem;
       background: linear-gradient(90deg, #0ff, #fff, #0ff);
       background-size: 200% auto;
       background-clip: text;
@@ -154,8 +126,8 @@
     }
 
     .desc {
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
+      font-size: 1rem;
+      margin-bottom: 0rem;
       color: #ccc;
     }
 
@@ -262,16 +234,22 @@
 <body>
 
   <!-- Header Banner -->
-  <img class="header-banner" src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/ox.png" alt="Banner"/>
-
-  <!-- Header Separator -->
-  <div class="header-separator"></div>
-
-  <!-- Main Box -->
-  <div class="glass-box">
-    <img class="profile-img" src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/Pp.gif" alt="Profile" />
+  <div class="tools-glass">
+   <img class="header-banner" src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/ox.png" alt="Banner"/>
+   <div class="desc">Crypto Toolkit for Trading, Analytics, and Web3 Utilities</div>
+  </div>
+  
+    <!-- Footer -->
+  <div class="footer">
+    <span>created by</span>
+  </div>
+  <div class="footer">
     <h1 class="shimmer-text">AceVod</h1>
+  </div>
+  <div class="footer">
     <div class="desc">Angel Investor | Yield Hunter | Perp Degen</div>
+  </div>
+  <div class="footer">
     <div class="social-icons">
       <a href="https://x.com/0xAceVod" target="_blank" title="X (Twitter)">
         <img src="https://raw.githubusercontent.com/acevod/super-doodle/refs/heads/main/x.jpg" alt="X" />
@@ -284,10 +262,10 @@
       </a>
     </div>
   </div>
-
-  <!-- Separator -->
+  
+    <!-- Separator -->
   <div class="separator"></div>
-
+  
   <!-- Tools Box -->
   <div class="tools-glass">
     <div class="tools-title">Tools</div>
